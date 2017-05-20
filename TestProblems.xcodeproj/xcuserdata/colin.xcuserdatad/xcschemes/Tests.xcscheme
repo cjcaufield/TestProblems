@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "0830"
+   version = "1.3">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3B2700101ECAF33000EFF28B"
+               BuildableName = "Tests.xctest"
+               BlueprintName = "Tests"
+               ReferencedContainer = "container:TestProblems.xcodeproj">
+            </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem1()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem11()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem12()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem13()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem14()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem17()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem19()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem2()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem20()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem21()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem22()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem24()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem26()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem27()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem28()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem29()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem3()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem35()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem38()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem42()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem46()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem5()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem53()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem58()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem6()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem66()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem67()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem69()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem7()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem70()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem8()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem83()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem88()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem9()">
+               </Test>
+            </SkippedTests>
+         </TestableReference>
+      </Testables>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>

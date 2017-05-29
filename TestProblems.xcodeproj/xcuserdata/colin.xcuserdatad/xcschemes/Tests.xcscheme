@@ -26,6 +26,15 @@
                   Identifier = "LeetCodeTests/testProblem1()">
                </Test>
                <Test
+                  Identifier = "LeetCodeTests/testProblem101()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem104()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem107()">
+               </Test>
+               <Test
                   Identifier = "LeetCodeTests/testProblem11()">
                </Test>
                <Test
@@ -75,6 +84,9 @@
                </Test>
                <Test
                   Identifier = "LeetCodeTests/testProblem35()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem371()">
                </Test>
                <Test
                   Identifier = "LeetCodeTests/testProblem38()">

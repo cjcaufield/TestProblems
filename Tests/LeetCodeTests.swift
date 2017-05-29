@@ -1771,6 +1771,214 @@ class LeetCodeTests: XCTestCase {
         XCTAssert(d == [1, 2, 3, 4, 5, 6])
     }
     
+    // MARK: - 101. Symmetric Tree
+    
+    func testProblem101() {
+        
+        func isSymmetric(_ root: TreeNode?) -> Bool {
+            return isSymmetricIterative(root)
+        }
+        
+        func isSymmetricRecursive(_ root: TreeNode?) -> Bool {
+            
+            func recurse(_ l: TreeNode?, _ r: TreeNode?) -> Bool {
+                
+                if l == nil && r == nil {
+                    return true
+                }
+                
+                if l?.val != r?.val {
+                    return false
+                }
+                
+                let outer = recurse(l?.left, r?.right)
+                let inner = recurse(l?.right, r?.left)
+                
+                return outer && inner
+            }
+            
+            return recurse(root?.left, root?.right)
+        }
+        
+        func isSymmetricIterative(_ root: TreeNode?) -> Bool {
+            
+            var nodes = [root]
+            
+            while !nodes.isEmpty {
+                
+                for i in 0 ..< nodes.count / 2 {
+                    
+                    let j = nodes.count - i - 1
+                    
+                    if nodes[i]?.val != nodes[j]?.val {
+                        return false
+                    }
+                }
+                
+                var newNodes = [TreeNode?]()
+                var hasObjects = false
+                
+                for n in nodes {
+                    
+                    if n?.left != nil || n?.right != nil {
+                        hasObjects = true
+                    }
+                    
+                    newNodes += [n?.left, n?.right]
+                }
+                
+                if !hasObjects {
+                    break
+                }
+                
+                nodes = newNodes
+            }
+            
+            return true
+        }
+        
+        XCTAssert(isSymmetric(TreeNode(values: 1,2,2,nil,3,nil,3)) == false)
+        XCTAssert(isSymmetric(TreeNode(values: 1,2,2,3,4,4,3)) == true)
+        
+        self.measure {
+            XCTAssert(isSymmetric(TreeNode(values: 6,82,82,nil,53,53,nil,-58,nil,nil,-58,nil,-85,-85,nil,-9,nil,nil,-9,nil,48,48,nil,33,nil,nil,33,81,nil,nil,81,5,nil,nil,5,61,nil,nil,61,nil,9,9,nil,91,nil,nil,91,72,7,7,72,89,nil,94,nil,nil,94,nil,89,-27,nil,-30,36,36,-30,nil,-27,50,36,nil,-80,34,nil,nil,34,-80,nil,36,50,18,nil,nil,91,77,nil,nil,95,95,nil,nil,77,91,nil,nil,18,-19,65,nil,94,nil,-53,nil,-29,-29,nil,-53,nil,94,nil,65,-19,-62,-15,-35,nil,nil,-19,43,nil,-21,nil,nil,-21,nil,43,-19,nil,nil,-35,-15,-62,86,nil,nil,-70,nil,19,nil,55,-79,nil,nil,-96,-96,nil,nil,-79,55,nil,19,nil,-70,nil,nil,86,49,nil,25,nil,-19,nil,nil,8,30,nil,82,-47,-47,82,nil,30,8,nil,nil,-19,nil,25,nil,49)) == false)
+        }
+    }
+    
+    // MARK: - 104. Maximum Depth of Binary Tree
+    
+    func testProblem104() {
+        
+        func maxDepth(_ root: TreeNode?) -> Int {
+            
+            if root == nil {
+                return 0
+            }
+            
+            return 1 + max(maxDepth(root!.left), maxDepth(root!.right))
+        }
+    }
+    
+    // MARK: - 107. Binary Tree Level Order Traversal II
+    
+    func testProblem107() {
+        
+        func levelOrderBottom(_ root: TreeNode?) -> [[Int]] {
+            
+            var solution = [[Int]]()
+            
+            if root == nil {
+                return solution
+            }
+            
+            var nodes = [root]
+            
+            while !nodes.isEmpty {
+                
+                var values = [Int]()
+                
+                for n in nodes {
+                    values += [n!.val]
+                }
+                
+                solution.insert(values, at: 0)
+                
+                var newNodes = [TreeNode]()
+                
+                for n in nodes {
+                    
+                    if let l = n?.left {
+                        newNodes += [l]
+                    }
+                    
+                    if let r = n?.right {
+                        newNodes += [r]
+                    }
+                }
+                
+                nodes = newNodes
+            }
+            
+            return solution
+        }
+    }
+    
+    // MARK: - 108. Convert Sorted Array to Binary Search Tree
+    
+    func testProblem108() {
+        
+        func sortedArrayToBST(_ nums: [Int]) -> TreeNode? {
+            
+            func helper(_ n: inout TreeNode?, _ begin: Int, _ end: Int) {
+                
+                if begin >= end {
+                    return
+                }
+                
+                let midIndex = begin + (end - begin) / 2
+                let val = nums[midIndex]
+                
+                assert(n == nil)
+                n = TreeNode(val)
+                
+                helper(&n!.left, begin, midIndex)
+                helper(&n!.right, midIndex + 1, end)
+            }
+            
+            if nums.isEmpty {
+                return nil
+            }
+            
+            var head: TreeNode?
+            
+            helper(&head, 0, nums.count)
+            
+            return head
+        }
+        
+        sortedArrayToBST([3, 5, 8])
+    }
+    
+    // MARK: - 110. Balanced Binary Tree
+    
+    func testProblem110() {
+        
+        func isBalanced(_ root: TreeNode?) -> Bool {
+            
+            if root == nil {
+                return true
+            }
+            
+            func balancedHeights(_ node: TreeNode?, _ leftHeight: inout Int, _ rightHeight: inout Int) -> Bool {
+                
+                if node == nil {
+                    leftHeight = 0
+                    rightHeight = 0
+                    return true
+                }
+                
+                var llh = 0
+                var lrh = 0
+                var rlh = 0
+                var rrh = 0
+                
+                let leftBalanced = balancedHeights(node!.left, &llh, &lrh)
+                let rightBalanced = balancedHeights(node!.right, &rlh, &rrh)
+                
+                leftHeight = 1 + max(llh, lrh)
+                rightHeight = 1 + max(rlh, rrh)
+                
+                let balanced = abs(leftHeight - rightHeight) <= 1
+                
+                return balanced && leftBalanced && rightBalanced
+            }
+            
+            var lh = 0
+            var rh = 0
+            return balancedHeights(root, &lh, &rh)
+        }
+    }
+    
     // MARK: - 371. Sum of Two Integers
     
     func testProblem371() {

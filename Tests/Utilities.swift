@@ -8,6 +8,24 @@
 
 import Foundation
 
+// Functions
+
+func equal2DArrays(_ a: [[Int]], _ b: [[Int]]) -> Bool {
+    
+    if a.count != b.count {
+        return false
+    }
+    
+    for i in 0 ..< a.count {
+        
+        if a[i] != b[i] {
+            return false
+        }
+    }
+    
+    return true
+}
+
 // Stack
 
 class Stack {

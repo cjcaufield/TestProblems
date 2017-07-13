@@ -10,6 +10,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
@@ -164,6 +165,9 @@
                   Identifier = "LeetCodeTests/testProblem26()">
                </Test>
                <Test
+                  Identifier = "LeetCodeTests/testProblem260()">
+               </Test>
+               <Test
                   Identifier = "LeetCodeTests/testProblem263()">
                </Test>
                <Test
@@ -245,6 +249,9 @@
                   Identifier = "LeetCodeTests/testProblem412()">
                </Test>
                <Test
+                  Identifier = "LeetCodeTests/testProblem413()">
+               </Test>
+               <Test
                   Identifier = "LeetCodeTests/testProblem414()">
                </Test>
                <Test
@@ -278,6 +285,9 @@
                   Identifier = "LeetCodeTests/testProblem448()">
                </Test>
                <Test
+                  Identifier = "LeetCodeTests/testProblem451()">
+               </Test>
+               <Test
                   Identifier = "LeetCodeTests/testProblem453()">
                </Test>
                <Test
@@ -293,6 +303,9 @@
                   Identifier = "LeetCodeTests/testProblem461()">
                </Test>
                <Test
+                  Identifier = "LeetCodeTests/testProblem462()">
+               </Test>
+               <Test
                   Identifier = "LeetCodeTests/testProblem463()">
                </Test>
                <Test
@@ -303,6 +316,9 @@
                </Test>
                <Test
                   Identifier = "LeetCodeTests/testProblem485()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem495()">
                </Test>
                <Test
                   Identifier = "LeetCodeTests/testProblem496()">
@@ -324,6 +340,9 @@
                </Test>
                <Test
                   Identifier = "LeetCodeTests/testProblem507()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem508()">
                </Test>
                <Test
                   Identifier = "LeetCodeTests/testProblem513()">
@@ -351,6 +370,9 @@
                </Test>
                <Test
                   Identifier = "LeetCodeTests/testProblem537()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeTests/testProblem540()">
                </Test>
                <Test
                   Identifier = "LeetCodeTests/testProblem541()">
@@ -407,6 +429,9 @@
                   Identifier = "LeetCodeTests/testProblem606()">
                </Test>
                <Test
+                  Identifier = "LeetCodeTests/testProblem609()">
+               </Test>
+               <Test
                   Identifier = "LeetCodeTests/testProblem617()">
                </Test>
                <Test
@@ -446,6 +471,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"

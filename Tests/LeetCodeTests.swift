@@ -2994,6 +2994,29 @@ class LeetCodeTests: XCTestCase {
         }
     }
     
+    // MARK: - 260. Single Number III
+    
+    func testProblem260() {
+        
+        func singleNumber(_ nums: [Int]) -> [Int] {
+            
+            var singles = Set<Int>()
+            
+            for n in nums {
+                
+                if singles.contains(n) {
+                    singles.remove(n)
+                } else {
+                    singles.insert(n)
+                }
+            }
+            
+            assert(singles.count == 2)
+            
+            return Array(singles)
+        }
+    }
+    
     // MARK: - 263. Ugly Number
     
     func testProblem263() {
@@ -4304,6 +4327,52 @@ class LeetCodeTests: XCTestCase {
         }
     }
     
+    // MARK: - 451. Sort Characters By Frequency
+    
+    func testProblem451() {
+        
+        func frequencySort(_ s: String) -> String {
+            
+            var counts = [Character: Int]()
+            
+            for c in s.characters {
+                
+                if counts[c] == nil {
+                    counts[c] = 0
+                }
+                
+                counts[c]! += 1
+            }
+            
+            var table = [Int: [Character]]()
+            
+            for (c, count) in counts {
+                
+                if table[count] == nil {
+                    table[count] = []
+                }
+                
+                table[count]!.append(c)
+            }
+            
+            let sortedCounts = Array(table.keys).sorted(by: >)
+            
+            var solution = ""
+            
+            for thisCount in sortedCounts {
+                
+                for c in table[thisCount]! {
+                    
+                    for i in 0 ..< thisCount {
+                        solution += String(c)
+                    }
+                }
+            }
+            
+            return solution
+        }
+    }
+    
     // MARK: - 453. Minimum Moves to Equal Array Elements
     
     func testProblem453() {
@@ -4507,6 +4576,32 @@ class LeetCodeTests: XCTestCase {
             }
             
             return count
+        }
+    }
+    
+    // MARK: - 462. Minimum Moves to Equal Array Elements II
+    
+    func testProblem462() {
+        
+        func minMoves2(_ nums: [Int]) -> Int {
+            
+            func calcMedian(_ nums: [Int]) -> Int {
+                let sorted = nums.sorted()
+                return sorted[nums.count / 2]
+            }
+            
+            let median = calcMedian(nums)
+            
+            var moveCount = 0
+            
+            for n in nums {
+                
+                let distance = abs(median - n)
+                
+                moveCount += distance
+            }
+            
+            return moveCount
         }
     }
     
@@ -4809,6 +4904,36 @@ class LeetCodeTests: XCTestCase {
         }
     }
     
+    // MARK: - 495. Teemo Attacking
+    
+    func testProblem495() {
+        
+        func findPoisonedDuration(_ timeSeries: [Int], _ duration: Int) -> Int {
+            
+            var prevTime: Int?
+            var totalDuration = 0
+            
+            for t in timeSeries {
+                
+                totalDuration += duration
+                
+                var overlap = 0
+                
+                if let pt = prevTime {
+                    overlap = pt + duration - t
+                }
+                
+                if overlap > 0 {
+                    totalDuration -= overlap
+                }
+                
+                prevTime = t
+            }
+            
+            return totalDuration
+        }
+    }
+    
     // MARK: - 496. Next Greater Element I
     
     func testProblem496() {
@@ -5046,6 +5171,54 @@ class LeetCodeTests: XCTestCase {
         
         self.measure {
             XCTAssert(checkPerfectNumber(30402457) == false)
+        }
+    }
+    
+    // MARK: - 508. Most Frequent Subtree Sum
+    
+    func testProblem508() {
+        
+        var sumCounts = [Int: Int]()
+        
+        var largestSumCount = 0
+        var largestSumValues = Set<Int>()
+        
+        func findFrequentTreeSum(_ root: TreeNode?) -> [Int] {
+            
+            if root == nil {
+                return []
+            }
+            
+            func helper(_ root: TreeNode?) -> Int {
+                
+                guard let root = root else {
+                    return 0
+                }
+                
+                let sum = root.val + helper(root.left) + helper(root.right)
+                
+                if sumCounts[sum] == nil {
+                    sumCounts[sum] = 0
+                }
+                
+                sumCounts[sum]! += 1
+                
+                let newCount = sumCounts[sum]!
+                
+                if newCount > largestSumCount {
+                    largestSumCount = newCount
+                    largestSumValues = [sum]
+                }
+                else if newCount == largestSumCount {
+                    largestSumValues.insert(sum)
+                }
+                
+                return sum
+            }
+            
+            helper(root)
+            
+            return Array(largestSumValues)
         }
     }
     
@@ -5970,6 +6143,51 @@ class LeetCodeTests: XCTestCase {
             }
             
             return str
+        }
+    }
+    
+    // MARK: - 609. Find Duplicate File in System
+    
+    func testProblem609() {
+        
+        func findDuplicate(_ paths: [String]) -> [[String]] {
+            
+            let parensCharset = CharacterSet(charactersIn:"()")
+            
+            var table = [String: [String]]()
+            
+            for path in paths {
+                
+                let strings = path.components(separatedBy: " ")
+                
+                let dir = strings[0]
+                
+                for i in 1 ..< strings.count {
+                    
+                    let substrings = strings[i].components(separatedBy: parensCharset)
+                    
+                    let filename = substrings[0]
+                    let contents = substrings[1]
+                    
+                    let fullpath = dir + "/" + filename
+                    
+                    if table[contents] == nil {
+                        table[contents] = []
+                    }
+                    
+                    table[contents]!.append(fullpath)
+                }
+            }
+            
+            var solution = [[String]]()
+            
+            for array in table.values {
+                if array.count > 1 {
+                    solution.append(array)
+                }
+            }
+            
+            return solution
         }
     }
     

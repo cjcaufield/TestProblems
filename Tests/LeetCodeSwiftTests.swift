@@ -1,5 +1,5 @@
 //
-//  LeetCodeTests.swift
+//  LeetCodeSwiftTests.swift
 //  Tests
 //
 //  Created by Colin Caufield on 2017-05-16.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class LeetCodeTests: XCTestCase {
+class LeetCodeSwiftTests: XCTestCase {
     
     // MARK: - 1. Two Sum ✓
     
@@ -1840,9 +1840,11 @@ class LeetCodeTests: XCTestCase {
         XCTAssert(isSymmetric(TreeNode(values: 1,2,2,nil,3,nil,3)) == false)
         XCTAssert(isSymmetric(TreeNode(values: 1,2,2,3,4,4,3)) == true)
         
+        /*
         self.measure {
             XCTAssert(isSymmetric(TreeNode(values: 6,82,82,nil,53,53,nil,-58,nil,nil,-58,nil,-85,-85,nil,-9,nil,nil,-9,nil,48,48,nil,33,nil,nil,33,81,nil,nil,81,5,nil,nil,5,61,nil,nil,61,nil,9,9,nil,91,nil,nil,91,72,7,7,72,89,nil,94,nil,nil,94,nil,89,-27,nil,-30,36,36,-30,nil,-27,50,36,nil,-80,34,nil,nil,34,-80,nil,36,50,18,nil,nil,91,77,nil,nil,95,95,nil,nil,77,91,nil,nil,18,-19,65,nil,94,nil,-53,nil,-29,-29,nil,-53,nil,94,nil,65,-19,-62,-15,-35,nil,nil,-19,43,nil,-21,nil,nil,-21,nil,43,-19,nil,nil,-35,-15,-62,86,nil,nil,-70,nil,19,nil,55,-79,nil,nil,-96,-96,nil,nil,-79,55,nil,19,nil,-70,nil,nil,86,49,nil,25,nil,-19,nil,nil,8,30,nil,82,-47,-47,82,nil,30,8,nil,nil,-19,nil,25,nil,49)) == false)
         }
+        */
     }
     
     // MARK: - 104. Maximum Depth of Binary Tree
@@ -2897,6 +2899,48 @@ class LeetCodeTests: XCTestCase {
             }
             
             return true
+        }
+    }
+    
+    // MARK: - 238. Product of Array Except Self
+    
+    func testProblem238() {
+        
+        func productExceptSelf(_ nums: [Int]) -> [Int] {
+            
+            var nonZeroProduct = 1
+            var zeroCount = 0
+            
+            for n in nums {
+                if n != 0 {
+                    nonZeroProduct *= n
+                } else {
+                    zeroCount += 1
+                }
+            }
+            
+            if zeroCount >= 2 {
+                return Array(repeating: 0, count: nums.count)
+            }
+            
+            var solution = [Int]()
+            
+            for n in nums {
+                
+                var value = nonZeroProduct
+                
+                if n != 0 {
+                    if zeroCount == 1 {
+                        value = 0
+                    } else {
+                        value /= n
+                    }
+                }
+                
+                solution.append(value)
+            }
+            
+            return solution
         }
     }
     
@@ -4363,7 +4407,7 @@ class LeetCodeTests: XCTestCase {
                 
                 for c in table[thisCount]! {
                     
-                    for i in 0 ..< thisCount {
+                    for _ in 0 ..< thisCount {
                         solution += String(c)
                     }
                 }
@@ -5216,7 +5260,7 @@ class LeetCodeTests: XCTestCase {
                 return sum
             }
             
-            helper(root)
+            _ = helper(root)
             
             return Array(largestSumValues)
         }
@@ -5386,6 +5430,149 @@ class LeetCodeTests: XCTestCase {
             
             return helper(i: 1, used: 0x0)
         }
+    }
+    
+    // MARK: - 529. Minesweeper
+    
+    func testProblem529() {
+        
+        class BoardWrapper {
+            
+            var board: [[Character]]
+            
+            init(_ b: [[Character]]) {
+                board = b
+            }
+        }
+        
+        func updateBoard(_ board: [[Character]], _ click: [Int]) -> [[Character]] {
+            
+            let h = board.count
+            let w = board[0].count
+            
+            func adjacentSquares(_ loc: [Int]) -> [[Int]] {
+                
+                var squares = [[Int]]()
+                
+                for y in 0 ..< 3 {
+                    for x in 0 ..< 3 {
+                        
+                        if y == 1 && x == 1 {
+                            continue
+                        }
+                        
+                        let r = loc[0] + y - 1
+                        let c = loc[1] + x - 1
+                        
+                        if 0 <= r && r < h && 0 <= c && c < w {
+                            let square = [r, c]
+                            squares.append(square)
+                        }
+                    }
+                }
+                
+                return squares
+            }
+            
+            func updateBoardHelper(_ wrapper: BoardWrapper, _ click: [Int]) {
+                
+                let r = click[0]
+                let c = click[1]
+                
+                let value = board[r][c]
+                
+                switch value {
+                    
+                case "M":
+                    
+                    wrapper.board[r][c] = "X"
+                    
+                case "E":
+                    
+                    let neighbors = adjacentSquares(click)
+                    
+                    var neighborMineCount = 0
+                    
+                    for n in neighbors {
+                        
+                        let nr = n[0]
+                        let nc = n[1]
+                        
+                        if wrapper.board[nr][nc] == "M" {
+                            neighborMineCount += 1
+                        }
+                    }
+                    
+                    if neighborMineCount > 0 {
+                        
+                        wrapper.board[r][c] = String(neighborMineCount).characters.last!
+                        
+                    } else {
+                        
+                        wrapper.board[r][c] = "B"
+                        
+                        for n in neighbors {
+                            
+                            let nr = n[0]
+                            let nc = n[1]
+                            
+                            let nv = wrapper.board[nr][nc]
+                            
+                            if nv == "M" || nv == "E" {
+                                updateBoardHelper(wrapper, n)
+                            }
+                        }
+                    }
+                    
+                default:
+                    break
+                }
+            }
+            
+            let wrapper = BoardWrapper(board)
+            
+            _ = updateBoardHelper(wrapper, click)
+            
+            return wrapper.board
+        }
+        
+        /*
+        let input: [[Character]] = [
+            ["E", "E", "E", "E", "E"],
+            ["E", "E", "M", "E", "E"],
+            ["E", "E", "E", "E", "E"],
+            ["E", "E", "E", "E", "E"]
+        ];
+        
+        let click = [3, 0]
+        
+        let expectedOutput: [[Character]] = [
+            ["B", "1", "E", "1", "B"],
+            ["B", "1", "M", "1", "B"],
+            ["B", "1", "1", "1", "B"],
+            ["B", "B", "B", "B", "B"]
+        ];
+        */
+        
+        let input: [[Character]] = [
+            ["B", "1", "E", "1", "B"],
+            ["B", "1", "M", "1", "B"],
+            ["B", "1", "1", "1", "B"],
+            ["B", "B", "B", "B", "B"]
+        ]
+        
+        let click = [1, 2]
+        
+        let expectedOutput: [[Character]] = [
+            ["B", "1", "E", "1", "B"],
+            ["B", "1", "X", "1", "B"],
+            ["B", "1", "1", "1", "B"],
+            ["B", "B", "B", "B", "B"]
+        ]
+        
+        let output = updateBoard(input, click)
+        
+        XCTAssert(equal2DArrays(output, expectedOutput))
     }
     
     // MARK: - 530. Minimum Absolute Difference in BST
@@ -5669,6 +5856,59 @@ class LeetCodeTests: XCTestCase {
         }
     }
     
+    // MARK: - 547. Friend Circles
+    
+    func testProblem547() { // REVISIT
+        
+        func findCircleNum(_ matrix: [[Int]]) -> Int {
+            
+            let width = matrix.count
+            
+            var unvisited = Set(Array(0 ..< width))
+            
+            var circles = [Set<Int>]()
+            
+            func gatherFriends(for i: Int) -> Set<Int> {
+                
+                var friends: Set = [i]
+                
+                let row = matrix[i]
+                
+                for (j, status) in row.enumerated() {
+                    
+                    if !unvisited.contains(j) {
+                        continue
+                    }
+                    
+                    if status == 1 {
+                        
+                        friends.insert(j)
+                        unvisited.remove(j)
+                        
+                        let indirectFriends = gatherFriends(for: j)
+                        
+                        friends = friends.union(indirectFriends)
+                    }
+                }
+                
+                return friends
+            }
+            
+            for i in 0 ..< width {
+                
+                let circle = gatherFriends(for: i)
+                
+                circles.append(circle)
+            }
+            
+            return circles.count
+        }
+        
+        let input = [[1,0,0,1],[0,1,1,0],[0,1,1,1],[1,0,1,1]]
+        
+        XCTAssert(findCircleNum(input) == 1)
+    }
+    
     // MARK: - 551. Student Attendance Record I
     
     func testProblem551() {
@@ -5841,6 +6081,61 @@ class LeetCodeTests: XCTestCase {
         }
         
         XCTAssert(findTilt(TreeNode(values: 1,2,3,4,nil,5)) == 11)
+    }
+    
+    // MARK: - 565. Array Nesting
+    
+    func testProblem565() {
+        
+        func arrayNesting(_ nums: [Int]) -> Int {
+            
+            var ns = nums
+            
+            var sequenceStart = 0
+            var sequenceLength = 0
+            var maxSequenceLength = 0
+            var visitedCount = 0
+            var index = 0
+            
+            while visitedCount < ns.count {
+                
+                let newIndex = ns[index]
+                assert(newIndex >= 0)
+                
+                ns[index] = Int.min
+                index = newIndex
+                
+                sequenceLength += 1
+                visitedCount += 1
+                
+                if newIndex == sequenceStart {
+                    
+                    if sequenceLength > maxSequenceLength {
+                        maxSequenceLength = sequenceLength
+                    }
+                    
+                    if visitedCount >= ns.count {
+                        break
+                    }
+                    
+                    while ns[index] < 0 {
+                        
+                        index += 1
+                        
+                        if index >= ns.count {
+                            index = 0
+                        }
+                    }
+                    
+                    sequenceStart = index
+                    sequenceLength = 0
+                }
+            }
+            
+            return maxSequenceLength
+        }
+        
+        XCTAssert(arrayNesting([5,4,0,3,1,6,2]) == 4)
     }
     
     // MARK: - 566. Reshape the Matrix

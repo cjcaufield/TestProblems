@@ -10,7 +10,7 @@ import Foundation
 
 // Functions
 
-func equal2DArrays(_ a: [[Int]], _ b: [[Int]]) -> Bool {
+func equal2DArrays<T: Equatable>(_ a: [[T]], _ b: [[T]]) -> Bool {
     
     if a.count != b.count {
         return false

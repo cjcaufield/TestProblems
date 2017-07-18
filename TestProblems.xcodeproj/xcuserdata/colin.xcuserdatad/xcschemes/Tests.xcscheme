@@ -24,442 +24,457 @@
             </BuildableReference>
             <SkippedTests>
                <Test
-                  Identifier = "LeetCodeTests/testProblem1()">
+                  Identifier = "LeetCodeObjCTests/testProblem1">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem101()">
+                  Identifier = "LeetCodeObjCTests/testProblem238">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem104()">
+                  Identifier = "LeetCodeSwiftTests/testProblem1()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem107()">
+                  Identifier = "LeetCodeSwiftTests/testProblem101()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem108()">
+                  Identifier = "LeetCodeSwiftTests/testProblem104()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem11()">
+                  Identifier = "LeetCodeSwiftTests/testProblem107()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem110()">
+                  Identifier = "LeetCodeSwiftTests/testProblem108()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem111()">
+                  Identifier = "LeetCodeSwiftTests/testProblem11()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem112()">
+                  Identifier = "LeetCodeSwiftTests/testProblem110()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem113()">
+                  Identifier = "LeetCodeSwiftTests/testProblem111()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem118()">
+                  Identifier = "LeetCodeSwiftTests/testProblem112()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem119()">
+                  Identifier = "LeetCodeSwiftTests/testProblem113()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem12()">
+                  Identifier = "LeetCodeSwiftTests/testProblem118()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem121()">
+                  Identifier = "LeetCodeSwiftTests/testProblem119()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem122()">
+                  Identifier = "LeetCodeSwiftTests/testProblem12()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem125()">
+                  Identifier = "LeetCodeSwiftTests/testProblem121()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem13()">
+                  Identifier = "LeetCodeSwiftTests/testProblem122()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem136()">
+                  Identifier = "LeetCodeSwiftTests/testProblem125()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem14()">
+                  Identifier = "LeetCodeSwiftTests/testProblem13()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem167()">
+                  Identifier = "LeetCodeSwiftTests/testProblem136()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem168()">
+                  Identifier = "LeetCodeSwiftTests/testProblem14()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem169()">
+                  Identifier = "LeetCodeSwiftTests/testProblem167()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem17()">
+                  Identifier = "LeetCodeSwiftTests/testProblem168()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem171()">
+                  Identifier = "LeetCodeSwiftTests/testProblem169()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem172()">
+                  Identifier = "LeetCodeSwiftTests/testProblem17()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem189()">
+                  Identifier = "LeetCodeSwiftTests/testProblem171()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem19()">
+                  Identifier = "LeetCodeSwiftTests/testProblem172()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem198()">
+                  Identifier = "LeetCodeSwiftTests/testProblem189()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem2()">
+                  Identifier = "LeetCodeSwiftTests/testProblem19()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem20()">
+                  Identifier = "LeetCodeSwiftTests/testProblem198()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem202()">
+                  Identifier = "LeetCodeSwiftTests/testProblem2()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem203()">
+                  Identifier = "LeetCodeSwiftTests/testProblem20()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem204()">
+                  Identifier = "LeetCodeSwiftTests/testProblem202()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem205()">
+                  Identifier = "LeetCodeSwiftTests/testProblem203()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem206()">
+                  Identifier = "LeetCodeSwiftTests/testProblem204()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem21()">
+                  Identifier = "LeetCodeSwiftTests/testProblem205()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem217()">
+                  Identifier = "LeetCodeSwiftTests/testProblem206()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem219()">
+                  Identifier = "LeetCodeSwiftTests/testProblem21()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem22()">
+                  Identifier = "LeetCodeSwiftTests/testProblem217()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem226()">
+                  Identifier = "LeetCodeSwiftTests/testProblem219()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem231()">
+                  Identifier = "LeetCodeSwiftTests/testProblem22()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem234()">
+                  Identifier = "LeetCodeSwiftTests/testProblem226()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem24()">
+                  Identifier = "LeetCodeSwiftTests/testProblem231()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem242()">
+                  Identifier = "LeetCodeSwiftTests/testProblem234()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem257()">
+                  Identifier = "LeetCodeSwiftTests/testProblem238()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem258()">
+                  Identifier = "LeetCodeSwiftTests/testProblem24()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem26()">
+                  Identifier = "LeetCodeSwiftTests/testProblem242()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem260()">
+                  Identifier = "LeetCodeSwiftTests/testProblem257()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem263()">
+                  Identifier = "LeetCodeSwiftTests/testProblem258()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem268()">
+                  Identifier = "LeetCodeSwiftTests/testProblem26()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem27()">
+                  Identifier = "LeetCodeSwiftTests/testProblem260()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem28()">
+                  Identifier = "LeetCodeSwiftTests/testProblem263()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem29()">
+                  Identifier = "LeetCodeSwiftTests/testProblem268()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem290()">
+                  Identifier = "LeetCodeSwiftTests/testProblem27()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem292()">
+                  Identifier = "LeetCodeSwiftTests/testProblem28()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem3()">
+                  Identifier = "LeetCodeSwiftTests/testProblem29()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem326()">
+                  Identifier = "LeetCodeSwiftTests/testProblem290()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem338()">
+                  Identifier = "LeetCodeSwiftTests/testProblem292()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem342()">
+                  Identifier = "LeetCodeSwiftTests/testProblem3()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem344()">
+                  Identifier = "LeetCodeSwiftTests/testProblem326()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem345()">
+                  Identifier = "LeetCodeSwiftTests/testProblem338()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem349()">
+                  Identifier = "LeetCodeSwiftTests/testProblem342()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem35()">
+                  Identifier = "LeetCodeSwiftTests/testProblem344()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem350()">
+                  Identifier = "LeetCodeSwiftTests/testProblem345()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem367()">
+                  Identifier = "LeetCodeSwiftTests/testProblem349()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem371()">
+                  Identifier = "LeetCodeSwiftTests/testProblem35()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem38()">
+                  Identifier = "LeetCodeSwiftTests/testProblem350()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem387()">
+                  Identifier = "LeetCodeSwiftTests/testProblem367()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem400()">
+                  Identifier = "LeetCodeSwiftTests/testProblem371()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem401()">
+                  Identifier = "LeetCodeSwiftTests/testProblem38()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem404()">
+                  Identifier = "LeetCodeSwiftTests/testProblem387()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem405()">
+                  Identifier = "LeetCodeSwiftTests/testProblem400()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem406()">
+                  Identifier = "LeetCodeSwiftTests/testProblem401()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem409()">
+                  Identifier = "LeetCodeSwiftTests/testProblem404()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem412()">
+                  Identifier = "LeetCodeSwiftTests/testProblem405()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem413()">
+                  Identifier = "LeetCodeSwiftTests/testProblem406()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem414()">
+                  Identifier = "LeetCodeSwiftTests/testProblem409()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem415()">
+                  Identifier = "LeetCodeSwiftTests/testProblem412()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem419()">
+                  Identifier = "LeetCodeSwiftTests/testProblem413()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem42()">
+                  Identifier = "LeetCodeSwiftTests/testProblem414()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem434()">
+                  Identifier = "LeetCodeSwiftTests/testProblem415()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem437()">
+                  Identifier = "LeetCodeSwiftTests/testProblem419()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem438()">
+                  Identifier = "LeetCodeSwiftTests/testProblem42()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem441()">
+                  Identifier = "LeetCodeSwiftTests/testProblem434()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem442()">
+                  Identifier = "LeetCodeSwiftTests/testProblem437()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem447()">
+                  Identifier = "LeetCodeSwiftTests/testProblem438()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem448()">
+                  Identifier = "LeetCodeSwiftTests/testProblem441()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem451()">
+                  Identifier = "LeetCodeSwiftTests/testProblem442()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem453()">
+                  Identifier = "LeetCodeSwiftTests/testProblem447()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem455()">
+                  Identifier = "LeetCodeSwiftTests/testProblem448()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem459()">
+                  Identifier = "LeetCodeSwiftTests/testProblem451()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem46()">
+                  Identifier = "LeetCodeSwiftTests/testProblem453()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem461()">
+                  Identifier = "LeetCodeSwiftTests/testProblem455()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem462()">
+                  Identifier = "LeetCodeSwiftTests/testProblem459()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem463()">
+                  Identifier = "LeetCodeSwiftTests/testProblem46()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem475()">
+                  Identifier = "LeetCodeSwiftTests/testProblem461()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem476()">
+                  Identifier = "LeetCodeSwiftTests/testProblem462()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem485()">
+                  Identifier = "LeetCodeSwiftTests/testProblem463()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem495()">
+                  Identifier = "LeetCodeSwiftTests/testProblem475()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem496()">
+                  Identifier = "LeetCodeSwiftTests/testProblem476()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem5()">
+                  Identifier = "LeetCodeSwiftTests/testProblem485()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem500()">
+                  Identifier = "LeetCodeSwiftTests/testProblem495()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem501()">
+                  Identifier = "LeetCodeSwiftTests/testProblem496()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem504()">
+                  Identifier = "LeetCodeSwiftTests/testProblem5()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem506()">
+                  Identifier = "LeetCodeSwiftTests/testProblem500()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem507()">
+                  Identifier = "LeetCodeSwiftTests/testProblem501()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem508()">
+                  Identifier = "LeetCodeSwiftTests/testProblem504()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem513()">
+                  Identifier = "LeetCodeSwiftTests/testProblem506()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem515()">
+                  Identifier = "LeetCodeSwiftTests/testProblem507()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem520()">
+                  Identifier = "LeetCodeSwiftTests/testProblem508()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem521()">
+                  Identifier = "LeetCodeSwiftTests/testProblem513()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem526()">
+                  Identifier = "LeetCodeSwiftTests/testProblem515()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem53()">
+                  Identifier = "LeetCodeSwiftTests/testProblem520()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem530()">
+                  Identifier = "LeetCodeSwiftTests/testProblem521()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem532()">
+                  Identifier = "LeetCodeSwiftTests/testProblem526()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem537()">
+                  Identifier = "LeetCodeSwiftTests/testProblem529()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem540()">
+                  Identifier = "LeetCodeSwiftTests/testProblem53()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem541()">
+                  Identifier = "LeetCodeSwiftTests/testProblem530()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem543()">
+                  Identifier = "LeetCodeSwiftTests/testProblem532()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem551()">
+                  Identifier = "LeetCodeSwiftTests/testProblem537()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem553()">
+                  Identifier = "LeetCodeSwiftTests/testProblem540()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem557()">
+                  Identifier = "LeetCodeSwiftTests/testProblem541()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem561()">
+                  Identifier = "LeetCodeSwiftTests/testProblem543()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem563()">
+                  Identifier = "LeetCodeSwiftTests/testProblem547()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem566()">
+                  Identifier = "LeetCodeSwiftTests/testProblem551()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem572()">
+                  Identifier = "LeetCodeSwiftTests/testProblem553()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem575()">
+                  Identifier = "LeetCodeSwiftTests/testProblem557()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem58()">
+                  Identifier = "LeetCodeSwiftTests/testProblem561()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem581()">
+                  Identifier = "LeetCodeSwiftTests/testProblem563()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem594()">
+                  Identifier = "LeetCodeSwiftTests/testProblem566()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem598()">
+                  Identifier = "LeetCodeSwiftTests/testProblem572()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem599()">
+                  Identifier = "LeetCodeSwiftTests/testProblem575()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem6()">
+                  Identifier = "LeetCodeSwiftTests/testProblem58()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem605()">
+                  Identifier = "LeetCodeSwiftTests/testProblem581()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem606()">
+                  Identifier = "LeetCodeSwiftTests/testProblem594()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem609()">
+                  Identifier = "LeetCodeSwiftTests/testProblem598()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem617()">
+                  Identifier = "LeetCodeSwiftTests/testProblem599()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem66()">
+                  Identifier = "LeetCodeSwiftTests/testProblem6()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem67()">
+                  Identifier = "LeetCodeSwiftTests/testProblem605()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem69()">
+                  Identifier = "LeetCodeSwiftTests/testProblem606()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem7()">
+                  Identifier = "LeetCodeSwiftTests/testProblem609()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem70()">
+                  Identifier = "LeetCodeSwiftTests/testProblem617()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem8()">
+                  Identifier = "LeetCodeSwiftTests/testProblem66()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem83()">
+                  Identifier = "LeetCodeSwiftTests/testProblem67()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem88()">
+                  Identifier = "LeetCodeSwiftTests/testProblem69()">
                </Test>
                <Test
-                  Identifier = "LeetCodeTests/testProblem9()">
+                  Identifier = "LeetCodeSwiftTests/testProblem7()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem70()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem8()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem83()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem88()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem9()">
                </Test>
             </SkippedTests>
          </TestableReference>

@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B2700141ECAF33000EFF28B /* LeetCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2700131ECAF33000EFF28B /* LeetCodeTests.swift */; };
+		3B2700141ECAF33000EFF28B /* LeetCodeSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2700131ECAF33000EFF28B /* LeetCodeSwiftTests.swift */; };
+		3B3D873D1F1992B3009C9586 /* LeetCodeObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3D873C1F1992B3009C9586 /* LeetCodeObjCTests.m */; };
 		3BB1E4E21ECB9BF10014181B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB1E4E11ECB9BF10014181B /* Utilities.swift */; };
 		3BBEE5481EE5FE7800E1E5AA /* Islands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBEE5471EE5FE7800E1E5AA /* Islands.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3B2700111ECAF33000EFF28B /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B2700131ECAF33000EFF28B /* LeetCodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCodeTests.swift; sourceTree = "<group>"; };
+		3B2700131ECAF33000EFF28B /* LeetCodeSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCodeSwiftTests.swift; sourceTree = "<group>"; };
 		3B2700151ECAF33000EFF28B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B3D873C1F1992B3009C9586 /* LeetCodeObjCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeetCodeObjCTests.m; sourceTree = "<group>"; };
 		3BB1E4E11ECB9BF10014181B /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		3BBEE5471EE5FE7800E1E5AA /* Islands.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Islands.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -34,7 +36,8 @@
 		3B2700121ECAF33000EFF28B /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				3B2700131ECAF33000EFF28B /* LeetCodeTests.swift */,
+				3B2700131ECAF33000EFF28B /* LeetCodeSwiftTests.swift */,
+				3B3D873C1F1992B3009C9586 /* LeetCodeObjCTests.m */,
 				3BB1E4E11ECB9BF10014181B /* Utilities.swift */,
 				3BBEE5471EE5FE7800E1E5AA /* Islands.swift */,
 				3B2700151ECAF33000EFF28B /* Info.plist */,
@@ -128,9 +131,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B3D873D1F1992B3009C9586 /* LeetCodeObjCTests.m in Sources */,
 				3BBEE5481EE5FE7800E1E5AA /* Islands.swift in Sources */,
 				3BB1E4E21ECB9BF10014181B /* Utilities.swift in Sources */,
-				3B2700141ECAF33000EFF28B /* LeetCodeTests.swift in Sources */,
+				3B2700141ECAF33000EFF28B /* LeetCodeSwiftTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +144,7 @@
 		3B2700161ECAF33000EFF28B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B55ZL2Y7PW;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -147,6 +152,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.secretgeometry.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -154,6 +160,7 @@
 		3B2700171ECAF33000EFF28B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B55ZL2Y7PW;
 				INFOPLIST_FILE = Tests/Info.plist;

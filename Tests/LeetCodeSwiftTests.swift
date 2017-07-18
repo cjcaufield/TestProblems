@@ -3373,6 +3373,58 @@ class LeetCodeSwiftTests: XCTestCase {
         }
     }
     
+    // MARK: - 347. Top K Frequent Elements
+    
+    func testProblem347() {
+        
+        func topKFrequent(_ nums: [Int], _ k: Int) -> [Int] {
+            
+            var counts = [Int: Int]()
+            
+            for n in nums {
+                
+                if counts[n] == nil {
+                    counts[n] = 0
+                }
+                
+                counts[n]! += 1
+            }
+            
+            var invertedCounts = [Int: [Int]]()
+            
+            for (k, v) in counts {
+                
+                if invertedCounts[v] == nil {
+                    invertedCounts[v] = []
+                }
+                
+                invertedCounts[v]!.append(k)
+            }
+            
+            let sortedCounts = invertedCounts.keys.sorted(by: >)
+            
+            var solution = [Int]()
+            
+            var solutionCount = 0
+            
+            for i in 0 ..< k {
+                
+                let count = sortedCounts[i]
+                let ns = invertedCounts[count]!
+                
+                solution += ns
+                
+                solutionCount += ns.count
+                
+                if solutionCount >= k {
+                    break
+                }
+            }
+            
+            return solution
+        }
+    }
+    
     // MARK: - 349. Intersection of Two Arrays
     
     func testProblem349() {
@@ -5096,6 +5148,35 @@ class LeetCodeSwiftTests: XCTestCase {
         }
     }
     
+    // MARK: - 503. Next Greater Element II
+    
+    func testProblem503() {
+        
+        func nextGreaterElements(_ nums: [Int]) -> [Int] {
+            
+            func increment(_ index: Int) -> Int {
+                return (index + 1) % nums.count
+            }
+            
+            var solution = Array(repeating: -1, count: nums.count)
+            
+            for (i, n) in nums.enumerated() {
+                
+                var j = increment(i)
+                
+                while j != i && nums[j] <= n {
+                    j = increment(j)
+                }
+                
+                if i != j {
+                    solution[i] = nums[j]
+                }
+            }
+            
+            return solution
+        }
+    }
+    
     // MARK: - 504. Base 7
     
     func testProblem504() {
@@ -6512,6 +6593,60 @@ class LeetCodeSwiftTests: XCTestCase {
             newNode.right = mergeTrees(t1!.right, t2!.right)
             
             return newNode
+        }
+    }
+    
+    // MARK: - 623. Add One Row to Tree
+    
+    func testProblem623() {
+        
+        func addOneRow(_ root: TreeNode?, _ v: Int, _ d: Int) -> TreeNode? {
+            
+            guard let root = root else {
+                return nil
+            }
+            
+            if d == 1 {
+                let newRoot = TreeNode(v)
+                newRoot.left = root
+                return newRoot
+            }
+            
+            var index = 1
+            var row = [root]
+            
+            while index != d - 1 {
+                
+                var nextRow = [TreeNode]()
+                
+                for node in row {
+                    
+                    if let l = node.left {
+                        nextRow.append(l)
+                    }
+                    
+                    if let r = node.right {
+                        nextRow.append(r)
+                    }
+                }
+                
+                row = nextRow
+                index += 1
+            }
+            
+            for node in row {
+                
+                let oldLeft = node.left
+                let oldRight = node.right
+                
+                node.left = TreeNode(v)
+                node.right = TreeNode(v)
+                
+                node.left!.left = oldLeft
+                node.right!.right = oldRight
+            }
+            
+            return root
         }
     }
 }

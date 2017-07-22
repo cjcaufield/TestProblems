@@ -37,6 +37,20 @@
                BlueprintName = "Tests"
                ReferencedContainer = "container:TestProblems.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "AlgorithmSwiftTests/testBubbleSort()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeObjCTests/testProblem1">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeObjCTests/testProblem238">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>

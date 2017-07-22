@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3B2700141ECAF33000EFF28B /* LeetCodeSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2700131ECAF33000EFF28B /* LeetCodeSwiftTests.swift */; };
 		3B3D873D1F1992B3009C9586 /* LeetCodeObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3D873C1F1992B3009C9586 /* LeetCodeObjCTests.m */; };
+		3B9011FF1F23F00000D68C84 /* AlgorithmSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9011FE1F23F00000D68C84 /* AlgorithmSwiftTests.swift */; };
 		3BB1E4E21ECB9BF10014181B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB1E4E11ECB9BF10014181B /* Utilities.swift */; };
 		3BBEE5481EE5FE7800E1E5AA /* Islands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBEE5471EE5FE7800E1E5AA /* Islands.swift */; };
 /* End PBXBuildFile section */
@@ -18,6 +19,7 @@
 		3B2700131ECAF33000EFF28B /* LeetCodeSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCodeSwiftTests.swift; sourceTree = "<group>"; };
 		3B2700151ECAF33000EFF28B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B3D873C1F1992B3009C9586 /* LeetCodeObjCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeetCodeObjCTests.m; sourceTree = "<group>"; };
+		3B9011FE1F23F00000D68C84 /* AlgorithmSwiftTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgorithmSwiftTests.swift; sourceTree = "<group>"; };
 		3BB1E4E11ECB9BF10014181B /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		3BBEE5471EE5FE7800E1E5AA /* Islands.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Islands.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -36,6 +38,7 @@
 		3B2700121ECAF33000EFF28B /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				3B9011FE1F23F00000D68C84 /* AlgorithmSwiftTests.swift */,
 				3B2700131ECAF33000EFF28B /* LeetCodeSwiftTests.swift */,
 				3B3D873C1F1992B3009C9586 /* LeetCodeObjCTests.m */,
 				3BB1E4E11ECB9BF10014181B /* Utilities.swift */,
@@ -134,6 +137,7 @@
 				3B3D873D1F1992B3009C9586 /* LeetCodeObjCTests.m in Sources */,
 				3BBEE5481EE5FE7800E1E5AA /* Islands.swift in Sources */,
 				3BB1E4E21ECB9BF10014181B /* Utilities.swift in Sources */,
+				3B9011FF1F23F00000D68C84 /* AlgorithmSwiftTests.swift in Sources */,
 				3B2700141ECAF33000EFF28B /* LeetCodeSwiftTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,7 +157,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -168,7 +172,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.secretgeometry.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -224,6 +228,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -271,6 +276,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

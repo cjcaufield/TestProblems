@@ -81,6 +81,53 @@ class ListNode: CustomStringConvertible {
         }
     }
     
+    func tail() -> ListNode {
+    
+        var node = self
+        
+        while node.next != nil {
+            node = node.next!
+        }
+        
+        return node
+    }
+    
+    func append(_ value: Int) {
+        
+        self.tail().next = ListNode(value)
+    }
+    
+    func remove(_ value: Int) -> (head: ListNode?, target: ListNode?) {
+        
+        let head = self
+        var prev: ListNode?
+        var node: ListNode? = head
+        
+        while node != nil {
+            
+            if node!.val == value {
+                
+                if node! === head {
+                    
+                    let newHead = head.next
+                    head.next = nil
+                    return (head: newHead, target: head)
+                    
+                } else {
+                    
+                    prev!.next = node!.next
+                    node!.next = nil
+                    return (head: head, target: node)
+                }
+            }
+            
+            prev = node
+            node = node!.next
+        }
+        
+        return (head: head, target: nil)
+    }
+    
     public var description: String {
         
         var result = "("

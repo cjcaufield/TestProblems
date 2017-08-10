@@ -12,7 +12,7 @@ class AlgorithmSwiftTests: XCTestCase {
     
     func testSorts() {
         
-        let sortFunctions = [bubbleSort, selectionSort, insertionSort /*, heapSort, mergeSort, quickSort*/]
+        let sortFunctions = [bubbleSort, selectionSort, insertionSort, heapSort /*, mergeSort, quickSort*/]
         
         for functions in sortFunctions {
             
@@ -39,7 +39,7 @@ class AlgorithmSwiftTests: XCTestCase {
             for j in 0 ..< unsortedCount - 1 {
                 
                 if ns[j] > ns[j + 1] {
-                    swap(&ns[j], &ns[j + 1])
+                    ns.swapAt(j, j + 1)
                 }
             }
         }
@@ -74,7 +74,7 @@ class AlgorithmSwiftTests: XCTestCase {
             let to = unsortedCount - 1
             
             if from != to {
-                swap(&ns[from], &ns[to])
+                ns.swapAt(from, to)
             }
         }
         
@@ -100,24 +100,13 @@ class AlgorithmSwiftTests: XCTestCase {
             var j = i
                 
             while j > 0 && value < ns[j - 1] {
+                
+                ns[j] = ns[j - 1]
                 j -= 1
             }
             
-            if i != j {
-                
-                var k = i - 1
-                
-                while k >= j {
-                    ns[k + 1] = ns[k]
-                    k -= 1
-                }
-                
-                ns[j] = value
-            }
+            ns[j] = value
         }
-        
-        print("From \(nums)")
-        print("To \(ns)")
         
         return ns
     }
@@ -126,8 +115,39 @@ class AlgorithmSwiftTests: XCTestCase {
     //
     //
     
+    class FakeHeap<T: Comparable> {
+        
+        var array: [T]
+        
+        init(_ a: [T]) {
+            array = a.sorted()
+        }
+        
+        func insert(_ item: T) {
+            array.append(item)
+            array.sort()
+        }
+        
+        func pop() -> T {
+            return array.removeFirst()
+        }
+        
+        var isEmpty: Bool {
+            return array.isEmpty
+        }
+    }
+    
     func heapSort(_ nums: [Int]) -> [Int] {
-        return []
+        
+        let heap = FakeHeap(nums)
+        
+        var solution = [Int]()
+        
+        while !heap.isEmpty {
+            solution.append(heap.pop())
+        }
+        
+        return solution
     }
     
     //
@@ -192,5 +212,19 @@ class AlgorithmSwiftTests: XCTestCase {
         XCTAssert(binarySearch(primes, 6) == 3)
         XCTAssert(binarySearch(primes, 22) == 8)
         XCTAssert(binarySearch(primes, 24) == 9)
+    }
+    
+    func testLinkedLists() {
+        
+        let list = ListNode(values: 1, 2, 3, 4, 5)
+        print("List is \(list)")
+        
+        list.append(6)
+        print("List is \(list)")
+        
+        let (newList, target) = list.remove(2)
+        print("New List is \(newList as Optional)")
+        print("Target is \(target as Optional)")
+        
     }
 }

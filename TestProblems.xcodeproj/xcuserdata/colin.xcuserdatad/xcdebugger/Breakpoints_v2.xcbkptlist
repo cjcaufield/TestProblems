@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tests/Utilities.swift"
-            timestampString = "522059361.581002"
+            timestampString = "522690286.399431"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
             landmarkName = "init(values:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -90,12 +90,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tests/LeetCodeSwiftTests.swift"
-            timestampString = "522098180.711102"
+            timestampString = "522690286.399556"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "6179"
-            endingLineNumber = "6179"
-            landmarkName = "arrayNesting(_:)"
+            startingLineNumber = "6444"
+            endingLineNumber = "6444"
+            landmarkName = "arrayPairSum(_:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -106,12 +106,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tests/LeetCodeSwiftTests.swift"
-            timestampString = "522098180.716074"
+            timestampString = "522690286.403682"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "6195"
-            endingLineNumber = "6195"
-            landmarkName = "arrayNesting(_:)"
+            startingLineNumber = "6460"
+            endingLineNumber = "6460"
+            landmarkName = "arrayPairSum(_:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -122,7 +122,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tests/AlgorithmSwiftTests.swift"
-            timestampString = "522457913.553628"
+            timestampString = "522650926.11472"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
@@ -170,13 +170,109 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tests/AlgorithmSwiftTests.swift"
-            timestampString = "522458207.420895"
+            timestampString = "522650926.114773"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "92"
             endingLineNumber = "92"
             landmarkName = "insertionSort(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tests/LeetCodeSwiftTests.swift"
+            timestampString = "522690286.40772"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "6737"
+            endingLineNumber = "6737"
+            landmarkName = "description"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tests/LeetCodeSwiftTests.swift"
+            timestampString = "522690286.411715"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "6699"
+            endingLineNumber = "6699"
+            landmarkName = "add(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tests/LeetCodeSwiftTests.swift"
+            timestampString = "522690286.415008"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "4641"
+            endingLineNumber = "4641"
+            landmarkName = "slowMinMoves(_:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tests/LeetCodeSwiftTests.swift"
+            timestampString = "522690286.418257"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "6148"
+            endingLineNumber = "6148"
+            landmarkName = "testProblem539()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tests.LeetCodeSwiftTests.testProblem539() -&gt; ()"
+                  moduleName = "Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/colin/Work/TestProblems/Tests/LeetCodeSwiftTests.swift"
+                  timestampString = "522651060.32288"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "6101"
+                  endingLineNumber = "6101"
+                  offsetFromSymbolStart = "158">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #1 : @autoclosure () throws -&gt; Swift.Bool in Tests.LeetCodeSwiftTests.testProblem539() -&gt; ()"
+                  moduleName = "Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/colin/Work/TestProblems/Tests/LeetCodeSwiftTests.swift"
+                  timestampString = "522651060.32662"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "6101"
+                  endingLineNumber = "6101"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

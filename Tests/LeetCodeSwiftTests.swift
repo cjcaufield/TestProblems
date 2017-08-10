@@ -1771,6 +1771,33 @@ class LeetCodeSwiftTests: XCTestCase {
         XCTAssert(d == [1, 2, 3, 4, 5, 6])
     }
     
+    // MARK: - 94. Binary Tree Inorder Traversal
+    
+    func testProblem94() {
+        
+        func inorderTraversal(_ root: TreeNode?) -> [Int] {
+            
+            var solution = [Int]()
+            
+            func helper(_ root: TreeNode?) {
+                
+                guard let root = root else {
+                    return
+                }
+                
+                helper(root.left)
+                
+                solution.append(root.val)
+                
+                helper(root.right)
+            }
+            
+            helper(root)
+            
+            return solution
+        }
+    }
+    
     // MARK: - 101. Symmetric Tree
     
     func testProblem101() {
@@ -4120,6 +4147,30 @@ class LeetCodeSwiftTests: XCTestCase {
         }
     }
     
+    // MARK: - 421. Maximum XOR of Two Numbers in an Array
+    
+    func testProblem421() {
+        
+        func findMaximumXOR(_ nums: [Int]) -> Int {
+            
+            var maximum = 0
+            
+            for i in 0 ..< nums.count {
+                
+                for j in i + 1 ..< nums.count {
+                    
+                    let xor = nums[i] ^ nums[j]
+                    
+                    if xor > maximum {
+                        maximum = xor
+                    }
+                }
+            }
+            
+            return maximum
+        }
+    }
+    
     // MARK: - 434. Number of Segments in a String
     
     func testProblem434() {
@@ -4340,6 +4391,55 @@ class LeetCodeSwiftTests: XCTestCase {
         }
     }
     
+    // MARK: - 445. Add Two Numbers II
+    
+    func testProblem445() {
+        
+        func addTwoNumbers(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
+            
+            func numFromList(_ l: ListNode?) -> Int {
+                
+                var num = 0
+                
+                var n = l
+                
+                while n != nil {
+                    
+                    num *= 10
+                    num += n!.val
+                    
+                    n = n!.next
+                }
+                
+                return num
+            }
+            
+            let num1 = numFromList(l1)
+            let num2 = numFromList(l2)
+            
+            let sumNum = num1 + num2
+            
+            var sumList: ListNode?
+            
+            var temp = sumNum
+            
+            while temp > 0 {
+                
+                let digit = temp % 10
+                temp /= 10
+                
+                let newNode = ListNode(digit)
+                
+                let oldSumList = sumList
+                
+                sumList = newNode
+                newNode.next = oldSumList
+            }
+            
+            return sumList
+        }
+    }
+    
     // MARK: - 447. Number of Boomerangs
     
     func testProblem447() {
@@ -4554,6 +4654,88 @@ class LeetCodeSwiftTests: XCTestCase {
         }
         
         
+    }
+    
+    // MARK: - 454. 4Sum II
+    
+    func testProblem454() {
+        
+        func sumCountSlowest(arrays: [[Int]], target: Int) -> Int {
+            
+            if arrays.count == 0 {
+                return (target == 0) ? 1 : 0
+            }
+            
+            let firstArray = arrays[0]
+            
+            var otherArrays = arrays
+            otherArrays.removeFirst()
+            
+            var count = 0
+            
+            for n in firstArray {
+                count += sumCountSlowest(arrays: otherArrays, target: target - n)
+            }
+            
+            return count
+        }
+        
+        func sumCountSlow(arrays: [[Int]], arrayOffset: Int, target: Int) -> Int {
+            
+            if arrayOffset == arrays.count {
+                return (target == 0) ? 1 : 0
+            }
+            
+            let firstArray = arrays[arrayOffset]
+            
+            var count = 0
+            
+            for n in firstArray {
+                count += sumCountSlow(arrays: arrays, arrayOffset: arrayOffset + 1, target: target - n)
+            }
+            
+            return count
+        }
+        
+        func sumCount(arrays: [[Int]], arrayOffset: Int, target: Int) -> Int {
+            
+            if arrayOffset == arrays.count {
+                return (target == 0) ? 1 : 0
+            }
+            
+            let firstArray = arrays[arrayOffset]
+            
+            var totalCount = 0
+            
+            var cache = [Int: Int]()
+            
+            for n in firstArray {
+                
+                var count = 0
+                
+                if let cachedCount = cache[n] {
+                    
+                    count = cachedCount
+                    
+                } else {
+                    
+                    count = sumCount(arrays: arrays, arrayOffset: arrayOffset + 1, target: target - n)
+                    
+                    cache[n] = count
+                }
+                
+                totalCount += count
+            }
+            
+            return totalCount
+        }
+        
+        func fourSumCount(_ a: [Int], _ b: [Int], _ c: [Int], _ d: [Int]) -> Int {
+            
+            return sumCount(arrays: [a, b, c, d], arrayOffset: 0, target: 0)
+        }
+        
+        XCTAssert(fourSumCount([1,2],[-2,-1],[-1,2],[0,2]) == 2)
     }
     
     // MARK: - 455. Assign Cookies
@@ -4977,6 +5159,40 @@ class LeetCodeSwiftTests: XCTestCase {
         XCTAssert(findComplement(5) == 2)
     }
     
+    // MARK: - 477. Total Hamming Distance
+    
+    func testProblem477() {
+        
+        func totalHammingDistance(_ nums: [Int]) -> Int {
+            
+            func hammingDistance(_ a: Int, _ b: Int) -> Int {
+                
+                var distance = 0
+                
+                for i in 0 ..< 32 {
+                    let mask = (0x1 << i)
+                    if (a & mask) != (b & mask) {
+                        distance += 1
+                    }
+                }
+                
+                return distance
+            }
+            
+            var totalDistance = 0
+            
+            for i in 0 ..< nums.count {
+                for j in i + 1 ..< nums.count {
+                    totalDistance += hammingDistance(nums[i], nums[j])
+                }
+            }
+            
+            return totalDistance
+        }
+        
+        XCTAssert(totalHammingDistance([4, 14, 2]) == 6)
+    }
+    
     // MARK: - 485. Max Consecutive Ones
     
     func testProblem485() {
@@ -5064,12 +5280,84 @@ class LeetCodeSwiftTests: XCTestCase {
             var solution = [Int]()
             
             for f in findNums {
-                
                 solution.append(table[f]!)
             }
             
             return solution
         }
+    }
+    
+    // MARK: - 498. Diagonal Traverse
+    
+    func testProblem498() {
+        
+        func findDiagonalOrder(_ matrix: [[Int]]) -> [Int] {
+            
+            if matrix.isEmpty {
+                return []
+            }
+            
+            var width = matrix[0].count
+            var height = matrix.count
+            
+            var h = 1
+            var v = -1
+            
+            var x = 0
+            var y = 0
+            
+            func turn() {
+                h *= -1
+                v *= -1
+            }
+            
+            var visited = 0
+            
+            var solution = [Int]()
+            
+            while visited < width * height {
+                
+                let value = matrix[y][x]
+                
+                solution.append(value)
+                
+                visited += 1
+                
+                var newX = x + h
+                var newY = y + v
+                
+                if newY >= height {
+                    
+                    newY = height - 1
+                    newX += 2
+                    turn()
+                    
+                } else if newX >= width {
+                    
+                    newX = width - 1
+                    newY += 2
+                    turn()
+                    
+                } else if newY < 0 {
+                    
+                    newY = 0
+                    turn()
+                    
+                } else if newX < 0 {
+                    
+                    newX = 0
+                    turn()
+                }
+                
+                x = newX
+                y = newY
+            }
+            
+            return solution
+        }
+        
+        XCTAssert(findDiagonalOrder([[1,2,3],[4,5,6],[7,8,9]]) == [1,2,4,7,5,3,6,8,9])
+        XCTAssert(findDiagonalOrder([[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]) == [1,2,5,9,6,3,4,7,10,13,14,11,8,12,15,16])
     }
     
     // MARK: - 500. Keyboard Row
@@ -5814,6 +6102,52 @@ class LeetCodeSwiftTests: XCTestCase {
         }
     }
     
+    // MARK: - 539. Minimum Time Difference
+    
+    func testProblem539() {
+        
+        func findMinDifference(_ timePoints: [String]) -> Int {
+            
+            func stringToMinutes(_ timeString: String) -> Int {
+                
+                let strings = timeString.components(separatedBy: ":")
+                
+                let hours = Int(strings[0])!
+                let minutes = Int(strings[1])!
+                
+                return 60 * hours + minutes
+            }
+            
+            let minutes = timePoints.map { stringToMinutes($0) }
+            
+            let sortedMinutes = minutes.sorted()
+            
+            var minDiff = Int.max
+            
+            for i in 0 ..< sortedMinutes.count - 1 {
+                
+                let m1 = sortedMinutes[i]
+                let m2 = sortedMinutes[i + 1]
+                
+                let diff = m2 - m1
+                
+                if diff < minDiff {
+                    minDiff = diff
+                }
+            }
+            
+            let rolloverDiff = (sortedMinutes.first! + 24 * 60) - sortedMinutes.last!
+            
+            if rolloverDiff < minDiff {
+                minDiff = rolloverDiff
+            }
+            
+            return minDiff
+        }
+        
+        XCTAssert(findMinDifference(["01:01","02:01"]) == 60)
+    }
+    
     // MARK: - 540. Single Element in a Sorted Array
     
     func testProblem540() {
@@ -6335,6 +6669,148 @@ class LeetCodeSwiftTests: XCTestCase {
         }
     }
     
+    // MARK: - 592. Fraction Addition and Subtraction
+    
+    func testProblem592() {
+        
+        struct Fraction: CustomStringConvertible {
+            
+            var positive = true
+            var numerator = 0
+            var denominator = 1
+            
+            mutating func reduce() {
+                
+                if denominator > 1 {
+                    for i in 2 ... denominator {
+                        while numerator % i == 0 && denominator % i == 0 {
+                            numerator /= i
+                            denominator /= i
+                        }
+                    }
+                }
+            }
+            
+            mutating func add(_ other: Fraction) {
+                
+                let d1 = denominator
+                let d2 = other.denominator
+                
+                var f1 = self
+                var f2 = other
+                
+                var commonDenominator: Int
+                
+                if d1 == d2 {
+                    commonDenominator = d1
+                    
+                } else if d1 % d2 == 0 {
+                    commonDenominator = d1
+                    f2.scaleBy(d1 / d2)
+                    
+                } else if d2 % d1 == 0 {
+                    commonDenominator = d2
+                    f1.scaleBy(d2 / d1)
+                    
+                } else {
+                    commonDenominator = d1 * d2
+                    f1.scaleBy(d2 / d1)
+                    f2.scaleBy(d1 / d2)
+                }
+                
+                numerator = f1.numerator + (f2.positive ? 1 : -1) * f2.numerator
+                
+                denominator = commonDenominator
+            }
+            
+            mutating func scaleBy(_ scalar: Int) {
+                
+                numerator *= scalar
+                denominator *= abs(scalar)
+            }
+            
+            var description: String {
+                
+                var str = positive ? "" : "-"
+                
+                str += String(numerator)
+                str += "/"
+                str += String(denominator)
+                
+                return str
+            }
+        }
+        
+        let decimalCharset = NSCharacterSet.decimalDigits
+        
+        func isDigit(_ c: Character) -> Bool {
+            return String(c).rangeOfCharacter(from: decimalCharset) != nil
+        }
+        
+        func charToInt(_ c: Character) -> Int {
+            return Int(String(c))!
+        }
+        
+        func fractionAddition(_ expression: String) -> String {
+            
+            let exp = Array(expression.characters)
+            
+            var solution = Fraction()
+            var current = Fraction()
+            
+            var hasNumerator = false
+            var denominatorCount = 0
+            
+            for c in exp {
+                
+                if c == "+" || c == "-" {
+                    
+                    solution.add(current)
+                    
+                    current = Fraction()
+                    current.positive = (c == "+")
+                    
+                    hasNumerator = false
+                    denominatorCount = 0
+                }
+                else if c == "/" {
+                    
+                    hasNumerator = true
+                }
+                else if isDigit(c) {
+                    
+                    if !hasNumerator {
+                        
+                        current.numerator *= 10
+                        current.numerator += charToInt(c)
+                        
+                    } else {
+                        
+                        if denominatorCount == 0 {
+                            current.denominator = charToInt(c)
+                        } else {
+                            current.denominator *= 10
+                            current.denominator += charToInt(c)
+                        }
+                        
+                        denominatorCount += 1
+                    }
+                }
+                else {
+                    
+                    assertionFailure()
+                }
+            }
+            
+            solution.add(current)
+            solution.reduce()
+            
+            return solution.description
+        }
+        
+        XCTAssert(fractionAddition("-1/2+1/2") == "0/1")
+    }
+    
     // MARK: - 594. Longest Harmonious Subsequence
     
     func testProblem594() {
@@ -6647,6 +7123,55 @@ class LeetCodeSwiftTests: XCTestCase {
             }
             
             return root
+        }
+    }
+    
+    // MARK: - 637. Average of Levels in Binary Tree
+    
+    func testProblem637() {
+        
+        func averageOfLevels(_ root: TreeNode?) -> [Int] {
+            
+            guard let root = root else {
+                return []
+            }
+            
+            var nodes = [root]
+            
+            var solution = [Int]()
+            
+            while !nodes.isEmpty {
+                
+                var total = 0
+                var count = 0
+                
+                for n in nodes {
+                    
+                    total += n.val
+                    count += 1
+                }
+                
+                let average = total / count
+                
+                solution.append(average)
+                
+                var nextNodes = [TreeNode]()
+                
+                for n in nodes {
+                    
+                    if let left = n.left {
+                        nextNodes.append(left)
+                    }
+                    
+                    if let right = n.right {
+                        nextNodes.append(right)
+                    }
+                }
+                
+                nodes = nextNodes
+            }
+            
+            return solution
         }
     }
 }

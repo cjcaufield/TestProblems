@@ -26,6 +26,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
@@ -39,7 +40,13 @@
             </BuildableReference>
             <SkippedTests>
                <Test
+                  Identifier = "AlgorithmSwiftTests/testBinarySearch()">
+               </Test>
+               <Test
                   Identifier = "AlgorithmSwiftTests/testBubbleSort()">
+               </Test>
+               <Test
+                  Identifier = "AlgorithmSwiftTests/testSorts()">
                </Test>
                <Test
                   Identifier = "LeetCodeObjCTests/testProblem1">
@@ -48,7 +55,478 @@
                   Identifier = "LeetCodeObjCTests/testProblem238">
                </Test>
                <Test
-                  Identifier = "LeetCodeSwiftTests">
+                  Identifier = "LeetCodeSwiftTests/testProblem1()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem101()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem104()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem107()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem108()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem11()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem110()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem111()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem112()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem113()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem118()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem119()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem12()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem121()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem122()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem125()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem13()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem136()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem14()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem167()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem168()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem169()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem17()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem171()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem172()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem189()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem19()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem198()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem2()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem20()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem202()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem203()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem204()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem205()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem206()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem21()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem217()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem219()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem22()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem226()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem231()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem234()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem238()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem24()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem242()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem257()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem258()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem26()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem260()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem263()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem268()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem27()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem28()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem29()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem290()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem292()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem3()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem326()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem338()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem342()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem344()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem345()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem347()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem349()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem35()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem350()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem367()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem371()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem38()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem387()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem400()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem401()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem404()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem405()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem406()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem409()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem412()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem413()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem414()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem415()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem419()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem42()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem434()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem437()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem438()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem441()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem442()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem447()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem448()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem451()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem453()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem454()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem455()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem459()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem46()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem461()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem462()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem463()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem475()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem476()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem477()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem485()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem495()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem496()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem498()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem5()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem500()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem501()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem503()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem504()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem506()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem507()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem508()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem513()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem515()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem520()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem521()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem526()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem529()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem53()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem530()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem532()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem537()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem540()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem541()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem543()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem547()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem551()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem553()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem557()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem561()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem563()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem565()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem566()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem572()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem575()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem58()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem581()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem592()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem594()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem598()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem599()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem6()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem605()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem606()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem609()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem617()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem623()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem66()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem67()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem69()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem7()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem70()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem8()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem83()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem88()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem9()">
+               </Test>
+               <Test
+                  Identifier = "LeetCodeSwiftTests/testProblem94()">
                </Test>
             </SkippedTests>
          </TestableReference>
@@ -69,6 +547,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
